@@ -9,7 +9,7 @@ Suppose that your project has the following local rule:
 
 - Specify the 3rd parameter explicitly when calling `in_array` to avoid unexpected comparison results.
 
-Your project code follows this rule if you don't forget to check it in code review. But what if you forget? What if your project has ten rules? You probably want machines to do such low-level checking.
+Your project code follows this rule unless you forget to check it in code review. But what if you forget? What if your project has ten rules? You probably want machines to do such low-level checking.
 
 Phinder is a command line tool for checking such low-level things automatically. By saving the following yml as `phinder.yml` and running `phinder` from your terminal, Phinder finds the violations for you:
 
@@ -21,19 +21,19 @@ Phinder is a command line tool for checking such low-level things automatically.
 
 ## Installation
 
-```bash
+```console
 composer global require sider/phinder
 ```
 
 You can check your installation by the following command:
 
-```bash
+```console
 ~/.composer/vendor/bin/phinder --help
 ```
 
 If you have `$HOME/.composer/vendor/bin` in your PATH, you can also check it by the following:
 
-```bash
+```console
 phinder --help
 ```
 
@@ -41,20 +41,20 @@ phinder --help
 
 ### Quick Test
 
-```bash
+```console
 phinder --quicktest <pattern>
 ```
 
 **Sample Usage:**
 
-```bash
+```console
 phinder --quicktest 'in_array(_, _)'
 phinder --quicktest 'var_dump(...)'
 ```
 
 ### JSON Output
 
-```bash
+```console
 phinder --json
 ```
 
@@ -81,21 +81,21 @@ phinder --json
 
 ### Rule Path
 
-```bash
+```console
 phinder --rule <file>  # Use <file> instead of phinder.yml
 phinder --rule <dir>   # Use all yml files in <dir>
 ```
 
 ### PHP Path
 
-```bash
+```console
 phinder --php <file>  # Find pieces in <file>
 phinder --php <dir>   # Find pieces in all php files in <dir>
 ```
 
 ### Help
 
-```bash
+```console
 phinder --help
 ```
 
