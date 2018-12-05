@@ -1,22 +1,22 @@
 # Command line options
 
-## Quick test
+### Quick testing
 
-```console
-phinder --quicktest <pattern>
+```
+phinder --quicktest <pattern>  # Find <pattern> in your code
 ```
 
 **Sample usage:**
 
-```console
+```
 phinder --quicktest 'in_array(_, _)'
 phinder --quicktest 'var_dump(...)'
 ```
 
-## JSON output
+### JSON output
 
-```console
-phinder --json
+```
+phinder --json  # Ouput results in json format
 ```
 
 **Sample output:**
@@ -40,28 +40,16 @@ phinder --json
 }
 ```
 
-## Specify rule path
+### Specify rule path
 
-```console
+```
 phinder --rule <file>  # Use <file> instead of phinder.yml
 phinder --rule <dir>   # Use all yml files in <dir>
 ```
 
-## Specify PHP file path
+### Specify PHP file path
 
-```console
+```
 phinder --php <file>  # Find pieces in <file>
 phinder --php <dir>   # Find pieces in all php files in <dir>
-```
-
-## Help
-
-```console
-phinder --help
-```
-
-## Test
-
-```console
-phinder test
 ```
