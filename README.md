@@ -21,19 +21,19 @@ Phinder is a command line tool for checking such low-level things automatically.
 
 ## Installation
 
-```console
+```
 composer global require sider/phinder
 ```
 
 You can check your installation by the following command:
 
-```console
+```
 ~/.composer/vendor/bin/phinder --help
 ```
 
 If you have `$HOME/.composer/vendor/bin` in your PATH, you can also check it by the following:
 
-```console
+```
 phinder --help
 ```
 
