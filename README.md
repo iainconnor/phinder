@@ -37,85 +37,19 @@ If you have `$HOME/.composer/vendor/bin` in your PATH, you can also check it by 
 phinder --help
 ```
 
-## Command Line Options
-
-### Quick Test
-
-```console
-phinder --quicktest <pattern>
-```
-
-**Sample Usage:**
-
-```console
-phinder --quicktest 'in_array(_, _)'
-phinder --quicktest 'var_dump(...)'
-```
-
-### JSON Output
-
-```console
-phinder --json
-```
-
-**Sample Output:**
-
-```json
-{
-  "result": [
-    {
-      "path": "./index.php",
-      "rule": {
-        "id": "sample.var_dump",
-        "message": "Do not use var_dump."
-      },
-      "location": {
-        "start": [4, 5],
-        "end": [4, 21]
-      }
-    }
-  ],
-  "errors": []
-}
-```
-
-### Rule Path
-
-```console
-phinder --rule <file>  # Use <file> instead of phinder.yml
-phinder --rule <dir>   # Use all yml files in <dir>
-```
-
-### PHP Path
-
-```console
-phinder --php <file>  # Find pieces in <file>
-phinder --php <dir>   # Find pieces in all php files in <dir>
-```
-
-### Help
-
-```console
-phinder --help
-```
-
-## Test
-
-```console
-phinder test
-```
+See [here](./doc/COMMAND_OPTIONS.md) for more information on command line options.
 
 ## Pattern Syntax
 
 Any PHP expression is a valid Phinder pattern.
-Phinder currently supports two kinds of wildcards:
+Phinder supports two kinds of wildcards:
 
 - `_`: any single expression
 - `...`: variable length arguments or array pairs
 
 For example, `foo(_)` means an invocation of `foo` with one argument.
 `bar(_, _, ...)` means an invocation of `bar` with two or more arguments.
-More features will be added such as statement search.
+See [here](./doc/PATTERN_BY_EXAMPLE.md) for more information on pattern syntax.
 
 ## Contributing
 
